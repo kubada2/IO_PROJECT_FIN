@@ -16,34 +16,13 @@ using System.Windows.Shapes;
 namespace IO_PROJECT_FIN
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    /// aha
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-            
-
-        }
-
-        private void Zaloguj_Click(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page1();
-        
-            
-        
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Main_Navigated(object sender, NavigationEventArgs e)
-        {
-
         }
     }
 }

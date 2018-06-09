@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IO_PROJECT_FIN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="472.689" Width="307.143">
+    <Grid Margin="0,0,2,-2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="235*"/>
+            <RowDefinition Height="209*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="LoginTextBox" HorizontalAlignment="Left" Height="27" Margin="77,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="Zaloguj" Content="Zaloguj!" HorizontalAlignment="Left" Margin="107,123.815,0,0" VerticalAlignment="Top" Width="75" Click="Zaloguj_Click" Grid.Row="1"/>
+        <Label Content="Login:" HorizontalAlignment="Left" Margin="77,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Haslo:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="77,208,0,0"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="143,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <Frame x:Name="Main" Navigated="Main_Navigated" Grid.RowSpan="2" Grid.Column="1" Margin="265,-12,-562,12"/>
+        <PasswordBox x:Name="PassTextBox" HorizontalAlignment="Left" Margin="77,3.815,0,0" VerticalAlignment="Top" Width="136" Height="28" Grid.Row="1"/>
     </Grid>
 </Window>
