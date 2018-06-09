@@ -18,6 +18,7 @@ namespace IO_PROJECT_FIN
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// aha
     public partial class MainWindow : Window
     {
         public MainWindow()
