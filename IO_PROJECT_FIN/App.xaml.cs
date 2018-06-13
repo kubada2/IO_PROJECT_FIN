@@ -13,5 +13,6 @@ namespace IO_PROJECT_FIN
     /// </summary>
     public partial class App : Application
     {
+        int i;
     }
 }
