@@ -14,8 +14,8 @@ namespace SqlTest_CSharp
     {
         static void Main(string[] args)
         {
-            MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user id=root;database=filmy;SslMode=none");
-            conn.Open();
+          MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user id=root;database=filmy;SslMode=none");
+          conn.Open();
 
 
             uzytkownik u = new uzytkownik();
@@ -33,21 +33,12 @@ namespace SqlTest_CSharp
             MySqlDataReader myReader;
 
             myReader = myCommand.ExecuteReader();
-
-            if (!myReader.HasRows)
-            {
-                Console.WriteLine("Wrong login or password!");
-            }
-        
             while (myReader.Read())
-            { 
-                    Console.WriteLine("Hello {0}", myReader.GetString(0));
+            {
+                Console.WriteLine("Hello {0}", myReader.GetString(0));
             }
-
             myReader.Close();
             conn.Close();
         }
-           
     }
-           
 }
