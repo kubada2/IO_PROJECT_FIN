@@ -12,10 +12,10 @@ namespace SqlTest_CSharp
     {
         static void Main(string[] args)
         {
-          SqlConnection conn = new SqlConnection("Server = localhost ;Database=filmy; Integrated Security = true");
-          conn.Open();
+          SqlConnection connecter = new SqlConnection("Server = 127.0.0.1 ;Database=filmy; Integrated Security = true");
+          connecter.Open();
 
-            SqlCommand cmd = new SqlCommand("SELECT * from filmy WHERE id_tytulu = 1");
+            SqlCommand cmd = new SqlCommand("SELECT * from filmy WHERE id_tytulu = 2");
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())
@@ -23,7 +23,7 @@ namespace SqlTest_CSharp
                 Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
             }
             reader.Close();
-            conn.Close();
+            connecter.Close();
         }
     }
 }
