@@ -20,7 +20,7 @@ namespace SqlTest_CSharp
 
             while (reader.Read())
             {
-                Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
+                Console.WriteLine("{0}  {1}", reader.GetString(0), reader.GetString(1));
             }
             reader.Close();
             connecter.Close();

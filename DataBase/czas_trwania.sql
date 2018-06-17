@@ -38,7 +38,7 @@ CREATE TABLE `czas_trwania` (
 --
 
 INSERT INTO `czas_trwania` (`id_tytulu`, `czas`) VALUES
-(1, 191),
+(1, 185),
 (2, 187),
 (3, 118),
 (4, 91),
