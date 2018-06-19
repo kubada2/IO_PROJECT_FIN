@@ -129,7 +129,60 @@ namespace SqlTest_CSharp
                         }
                         else
                         {
-                            string mySelectQuery2 = "SELECT filmy.tytul, filmy.rezyser, filmy.ocena, filmy.data_premiery, gatunek.nazwa_gatunku FROM filmy JOIN gatunek ON filmy.id_gatunku = gatunek.ID_gatunku WHERE filmy.tytul ='" + titles[o] + "'";
+                            string temp = titles[o];
+                            while (temp.Contains('ą') | temp.Contains('ę') | temp.Contains('ś') | temp.Contains('ć') | temp.Contains('ż') | temp.Contains('ó'))
+                            {
+                                if (temp.Contains('ą'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ą');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ę'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ę');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+
+                                }
+                                else if (temp.Contains('ś'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ś');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ć'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ć');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ż'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ż');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ó'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ó');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                            }
+                            string mySelectQuery2 = "SELECT filmy.tytul, filmy.rezyser, filmy.ocena, filmy.data_premiery, gatunek.nazwa_gatunku FROM filmy JOIN gatunek ON filmy.id_gatunku = gatunek.ID_gatunku WHERE filmy.tytul LIKE'" + temp + "'";
                             MySqlCommand myCommand2 = new MySqlCommand(mySelectQuery2, conn);
                             MySqlDataReader myReader2;
 
