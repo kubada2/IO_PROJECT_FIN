@@ -1,4 +1,4 @@
-#include "Konto.h"
+#include "..\..\..\BB\Desktop\In¿ynieria Oprogramowania\In-ynieria-oprogramowania\Konto.h"
 
 void Konto::setHaslo() {
 	// TODO - implement Konto::setHaslo
@@ -97,5 +97,15 @@ void Konto::DodajKomentarz() {
 
 int Konto::OcenTytul() {
 	// TODO - implement Konto::OcenTytul
+	throw "Not yet implemented";
+}
+
+void Konto::OdzyskajHaso() {
+	// TODO - implement Konto::OdzyskajHaso
+	throw "Not yet implemented";
+}
+
+void Konto::StanTytulu() {
+	// TODO - implement Konto::StanTytulu
 	throw "Not yet implemented";
 }

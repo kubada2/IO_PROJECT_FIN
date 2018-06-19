@@ -1,4 +1,4 @@
-#include "ObserwatorTytulu.h"
+#include "..\..\..\BB\Desktop\In¿ynieria Oprogramowania\In-ynieria-oprogramowania\ObserwatorTytulu.h"
 
 void ObserwatorTytulu::Start() {
 	// TODO - implement ObserwatorTytulu::Start
