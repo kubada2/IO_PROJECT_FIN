@@ -130,7 +130,7 @@ namespace SqlTest_CSharp
                         else
                         {
                             string temp = titles[o];
-                            while (temp.Contains('ą') | temp.Contains('ę') | temp.Contains('ś') | temp.Contains('ć') | temp.Contains('ż') | temp.Contains('ó'))
+                            while (temp.Contains('ą') | temp.Contains('ę') | temp.Contains('ś') | temp.Contains('ć') | temp.Contains('ż') | temp.Contains('ó') | temp.Contains('ź') | temp.Contains('ł'))
                             {
                                 if (temp.Contains('ą'))
                                 {
@@ -178,6 +178,22 @@ namespace SqlTest_CSharp
                                     System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
 
                                     int index = temp.IndexOf('ó');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ź'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ź');
+                                    strBuilder[index] = '_';
+                                    temp = strBuilder.ToString();
+                                }
+                                else if (temp.Contains('ł'))
+                                {
+                                    System.Text.StringBuilder strBuilder = new System.Text.StringBuilder(temp);
+
+                                    int index = temp.IndexOf('ł');
                                     strBuilder[index] = '_';
                                     temp = strBuilder.ToString();
                                 }
