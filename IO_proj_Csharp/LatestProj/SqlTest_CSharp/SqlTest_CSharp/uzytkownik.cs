@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SqlTest_CSharp
 {
-    class uzytkownik
+    class Uzytkownik : Konto
     {
         
     }
