@@ -15,9 +15,9 @@ namespace SqlTest_CSharp
             int o; // menu option
             Boolean MenuOnGoing = true;
             Boolean isLogged = false;
+            Konto k = new Konto();
 
 
-            
             while (MenuOnGoing == true)
             {
                 if (isLogged == false)
@@ -30,10 +30,10 @@ namespace SqlTest_CSharp
                     switch (o)
                     {
                         case 1:
-                            isLogged = Logowanie();
+                            isLogged = Logowanie(k);
                             break;
                         case 2:
-                            isLogged = Rejestracja();
+                            isLogged = Rejestracja(k);
                             break;
                         case 0:
                             MenuOnGoing = false;
@@ -44,6 +44,25 @@ namespace SqlTest_CSharp
                         Console.Clear();
                     }
                 }
+                else
+                {
+                    Console.WriteLine("1.Wyszukuj przez nazwe tytulu.");
+                    Console.WriteLine("2.Wyszukuj przez filtrowanie.");
+                    Console.WriteLine("0.Wyjscie.");
+                    o = Int32.Parse(Console.ReadLine());
+                    switch (o)
+                    {
+                        case 1:
+                            k.WyszukajTytul();
+                            break;
+                        case 2:
+                            k.WyszukajTytulPoFiltrze();
+                            break;
+                        case 0:
+                            MenuOnGoing = false;
+                            break;
+                    }
+                }
                 
             }
             
@@ -51,13 +70,13 @@ namespace SqlTest_CSharp
         }
 
 
-        static Boolean Logowanie()
+        static Boolean Logowanie(Konto k)
         {
             MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user id=root;database=filmy;SslMode=none");
             conn.Open();
 
 
-            Konto k = new Konto();
+            
             Console.WriteLine("Podaj login:");
             k.SetNazwa_uzytkownika(Console.ReadLine());
 
@@ -91,13 +110,13 @@ namespace SqlTest_CSharp
             return false;
         }
 
-        static Boolean Rejestracja()
+        static Boolean Rejestracja(Konto k)
         {
             MySqlConnection conn = new MySqlConnection("server=127.0.0.1;user id=root;database=filmy;SslMode=none");
             conn.Open();
 
             //creating new Konto
-            Konto k = new Konto();
+            
             Console.WriteLine("Podaj login:");
             k.SetNazwa_uzytkownika(Console.ReadLine());
             string mySelectQuery = "SELECT nazwa_uzytkownika FROM uzytkownik WHERE nazwa_uzytkownika ='" + k.Zwroc_nazwa_uzytkownika() + "'";
