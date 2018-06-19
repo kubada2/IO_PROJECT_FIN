@@ -1,4 +1,4 @@
-#include "Tytul.h"
+#include "..\..\..\BB\Desktop\In¿ynieria Oprogramowania\In-ynieria-oprogramowania\Tytul.h"
 
 void Tytul::PodajStan() {
 	// TODO - implement Tytul::PodajStan
@@ -47,10 +47,5 @@ void Tytul::Edytuj() {
 
 void Tytul::Usun() {
 	// TODO - implement Tytul::Usun
-	throw "Not yet implemented";
-}
-
-void Tytul::AktualizujOcene() {
-	// TODO - implement Tytul::AktualizujOcene
 	throw "Not yet implemented";
 }

@@ -1,4 +1,4 @@
-#include "EditBox.h"
+#include "..\..\..\BB\Desktop\In¿ynieria Oprogramowania\In-ynieria-oprogramowania\EditBox.h"
 
 void EditBox::virtual_Dodaj_komentarz() {
 	// TODO - implement EditBox::virtual Dodaj_komentarz

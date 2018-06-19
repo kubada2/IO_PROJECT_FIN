@@ -1,4 +1,4 @@
-#include "Administrator.h"
+#include "..\..\..\BB\Desktop\In¿ynieria Oprogramowania\In-ynieria-oprogramowania\Administrator.h"
 
 void Administrator::UsunKonto() {
 	// TODO - implement Administrator::UsunKonto
